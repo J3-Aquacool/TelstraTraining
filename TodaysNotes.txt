@@ -1,0 +1,160 @@
+IO Package
+
+What is the IO Package?
+
+Io is package which provides set of predfined classes and interfaces to perform input and output operations on the console has wel has FileSystem.
+
+
+How does the I/O happen in java?
+
+Java uses I/O Streams to perform I/O operation both on console and Filesystem
+
+
+
+What is a Stream?
+
+Stream is a connection between a java program and a file/console.
+Stream can be also be termed as flow of data between java programme and some media
+
+
+
+
+
+Source                                          Destination
+
+Program     <----------------Stream(byte)----------------->File/Console
+
+
+
+Input------> Read Data------->InputStream
+Output------> Writing data---->OutputStream
+
+All the Stream classes are under java.io.
+
+
+IO
+
+ByteBased Streams
+
+AC-InputStream
+
+C-DataInputStream
+C-FileInputStream
+C-ByteArrayInputStream
+
+
+
+
+
+
+AC-OutputStream
+C-DataOutputStream
+C-FileOutputStream
+C-ByteArrayOutputStream
+
+
+I want read data from console
+C-DataInputStream
+
+
+I want read data from filesystem
+C-FileInputStream
+
+
+I want read data from the in-memory managed by the VM
+C-ByteArraInputStream
+
+
+
+
+Streams----------->Byte-------------8 bits
+
+
+In java-----we have 2 types of Stream?
+
+
+
+Character Based Streams----> character
+
+
+
+Reader
+BufferedReader
+InputStreamReader---------------------->FileReader
+StringReader
+
+
+*******************************
+Writer
+BufferedWriter
+InputStreamWriter---------------------->FileWriter
+StringWriter
+
+
+
+Use of BytebasedStreams
+1.Can read or write textfiles,images,audio files........
+
+Use of CharacterbasedStreams
+1.TextFile
+
+
+
+
+1. Using Byte Streams to read data from the console(DataInputStream)
+2. Using Character Stream to read the data from the console.(BufferedReader)
+
+
+
+
+
+
+
+
+
+
+
+System.out.println();
+
+
+println()----method
+
+out-----() reference of outputStream
+
+System is a class under java.lang package
+
+
+
+Reading the Data from the File
+
+
+
+
+
+Requiremet Assignment Work
+
+MultiThreading
+1. Create an Application with using multithreading where one thread perform reading of data and another thread will write the read data
+
+
+IO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
