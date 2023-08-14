@@ -1,0 +1,24 @@
+Predefined Functional Interfaces:
+
+java.util.function
+
+1.Consumer:   It is used to accept some data and perform the required operation/ ie accept some
+void accept(T t);
+
+2.Predicate: to evaluate a certain condition/expression and returns boolean
+boolean test(T t)
+
+
+
+3.Supplier: supplies object and rerurns the result of that object
+T get();
+
+4.Function
+R apply(T t)
+
+5.BiConsumer
+
+void accept(T,U)
+
+6.BiPredicate
+boolean test(T,U)
