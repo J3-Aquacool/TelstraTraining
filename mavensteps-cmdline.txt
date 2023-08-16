@@ -1,0 +1,17 @@
+1.mvn archetype:generate -DgroupId=com.j3 -DartifactId=FirstDemo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+2.#compile the project and generate target folder
+mvn compile
+
+3.mvn package: compiles test cases and creates the target folder with jar file for execution and runs the Junit test
+
+
+
+// Execution of Java Code
+4.mvn exec:java -Dexec.mainClass=com.j3.App
+or
+5.java -cp target/FirstDemo-1.0-SNAPSHOT.jar com.j3.App
+
+
+// to run
+6: mvn test or mvn clean test
