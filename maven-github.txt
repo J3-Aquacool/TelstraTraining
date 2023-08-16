@@ -1,0 +1,26 @@
+MavenJavaProject-----------------seed ---------------------------> Repository(Git Hub)
+
+Requirements for via eclipse or command line
+
+Step 1: Github Account
+Step2: Create a Repository
+Step 3: git hub accesstoken
+
+Note : eclipse should have git plugin
+
+on the command line
+
+
+1. First create maven project
+2. create a local git repository
+
+git init ----> inside the maven project folder
+git add .----> add the files in the local git repo for staging
+
+git status-====> check the status of the files addded
+
+git commit -m "give some commit message for tracking"
+git remote add origin https://github.com/J3-Aquacool/JFSTestRepo.git
+git push -u -f origin master
+
+
