@@ -1,0 +1,144 @@
+Tomcat Server: this is used to deploy our web applications
+
+It handles the request coming from the client and serves the response back to the client.
+
+
+JBOSS,Webspehere,Weblogic,ApacheHttp
+
+
+How Web Application works?
+
+
+
+
+
+client------> Browser---> http(protocol)------------>Webserver/AppServer  ----->Container-----(Application)--------->Provide-----> response---->via http--->webserver/appserver---->client.
+
+
+
+1. Installed webserver
+2. Configured WebServer
+
+
+
+
+// How MVC APPLication is Working
+
+
+Spring MVC:
+
+
+class DispatcherServlet extends HttpServlet
+{
+public void doGet(HttpServletRequest req,HttpServletResponse res)
+{
+
+}
+
+public void doPost(HttpServletRequest req,HttpServletResponse res)
+{
+
+}
+
+
+}
+
+
+Steps:
+
+1. Configure the dispatcher servlet in web.xml file
+
+
+
+
+<servlet>
+<servlet-name>spring</servlet-name>
+<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
+</servlet>
+
+
+
+</servlet-mapping>
+<servlet-name>spring</servlet-name>
+<url-pattern></url-pattern>
+</servlet-mapping>
+              
+
+
+2.Tell the front controller that all the components will be configured in one xml file
+
+In the spring spring-servlet.xml add the following tag to scan all components for spring container
+<context:component-scan base-package="com.demo.controller" />  
+
+
+
+Add the view resolve for the spring mvc conatiner to enable and tell the view resolver to pick all views from the mentioned path
+
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+<property name="prefix" value="/jsp/" />
+<property name="suffix" value=".jsp" />
+</bean>
+
+3.Now create a controller Class by some name
+4. Annotate and inform the spring container  that this is a mvc controller
+
+
+
+@Controller
+
+class LoginController
+{
+
+
+}
+
+5. Add the ampping to lookup or request  that controller
+
+@Controller
+@RequestMapping("/welcome")
+class LoginController
+{
+
+
+}
+
+6.
+
+@Controller
+@RequestMapping("/welcome")
+class LoginController
+{
+ public ModelAndView helloWorld() {
+		String message =  "Using Spring MVC 3";
+		 System.out.println("Inside Controller");
+		 
+		   return new ModelAndView("welcome", "welcomeMessage", message);
+    }
+
+}
+
+
+
+
+Model and View----->data------>welcomeMessage
+welcome-----> is nothing but the prefix ie logical name------->
+
+
+
+welcome---->
+
+
+/jsp/welcome+suffix
+/jsp/welcome.jsp
+
+jsp
+
+
+${welcomeMessage}-----> EL Expressions
+
+
+http://localhost:8090/mvcdemo/welcome
+
+welcome
+
